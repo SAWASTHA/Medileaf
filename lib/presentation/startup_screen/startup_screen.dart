@@ -18,8 +18,12 @@ class StartupScreen extends GetWidget<StartupController> {
       top: false,
       child: Scaffold(
           body: Center(
-        child: CustomImageView(
-          imagePath: ImageConstant.icon,
+        child: Container(
+          height: 150,
+          width: 100,
+          child: CustomImageView(
+            imagePath: ImageConstant.icon,
+          ),
         ),
       )),
     );

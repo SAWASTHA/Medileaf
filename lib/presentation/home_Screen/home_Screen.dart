@@ -193,6 +193,7 @@ class _home_ScreenState extends State<home_Screen> {
                 text: "SCAN",
               ),
               GButton(
+                onPressed: () => onTapSearch(),
                 icon: Icons.search,
                 text: "SEARCH",
               ),
@@ -206,6 +207,12 @@ class _home_ScreenState extends State<home_Screen> {
   onTapCamera() async {
     Get.toNamed(
       AppRoutes.camerascreen,
+    );
+  }
+
+  onTapSearch() async {
+    Get.toNamed(
+      AppRoutes.searchscreen,
     );
   }
 }

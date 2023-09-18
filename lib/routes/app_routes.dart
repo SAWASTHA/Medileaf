@@ -1,6 +1,8 @@
 import 'package:rohit_s_application12/presentation/camera_screen/camera_screen.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/binding/home_Screen_binding.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/home_Screen.dart';
+import 'package:rohit_s_application12/presentation/search_screen/binding/search_screen_binding.dart';
+import 'package:rohit_s_application12/presentation/search_screen/searchscreen.dart';
 import 'package:rohit_s_application12/presentation/startup_screen/startup_screen.dart';
 import 'package:rohit_s_application12/presentation/startup_screen/binding/startup_binding.dart';
 import 'package:rohit_s_application12/presentation/l_s_screen/l_s_screen.dart';
@@ -30,7 +32,16 @@ class AppRoutes {
 
   static const String camerascreen = '/camera_screen';
 
+  static const String searchscreen = '/searchscreen';
+
   static List<GetPage> pages = [
+    GetPage(
+      name: searchscreen,
+      page: () => search_Screen(),
+      bindings: [
+        search_screenBinding(),
+      ],
+    ),
     GetPage(
       name: camerascreen,
       page: () => camera_screen(),
