@@ -1,3 +1,4 @@
+import 'package:rohit_s_application12/presentation/camera_screen/camera_screen.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/binding/home_Screen_binding.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/home_Screen.dart';
 import 'package:rohit_s_application12/presentation/startup_screen/startup_screen.dart';
@@ -27,7 +28,16 @@ class AppRoutes {
 
   static const String homeScreen = '/home_Screen';
 
+  static const String camerascreen = '/camera_screen';
+
   static List<GetPage> pages = [
+    GetPage(
+      name: camerascreen,
+      page: () => camera_screen(),
+      bindings: [
+        home_ScreenBinding(),
+      ],
+    ),
     GetPage(
       name: startupScreen,
       page: () => StartupScreen(),

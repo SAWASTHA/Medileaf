@@ -31,4 +31,12 @@ class ImageConstant {
   static String imageNotFound = 'assets/images/image_not_found.png';
 
   static String icon = '$imagePath/icon.png';
+
+  static String homeplant = '$imagePath/plant2.png';
+
+  static String haveANiceDay = '$imagePath/Have a nice day!2.png';
+
+  static String plant3 = '$imagePath/plant3.png';
+
+  static String ClickImage = '$imagePath/Ellipse.png';
 }
