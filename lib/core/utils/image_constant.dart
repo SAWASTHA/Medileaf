@@ -39,4 +39,6 @@ class ImageConstant {
   static String plant3 = '$imagePath/plant3.png';
 
   static String ClickImage = '$imagePath/Ellipse.png';
+
+  static String p = '$imagePath/rose.jpeg';
 }

@@ -1,6 +1,11 @@
+import 'dart:io';
+
+import 'package:flutter/material.dart';
 import 'package:rohit_s_application12/presentation/camera_screen/camera_screen.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/binding/home_Screen_binding.dart';
 import 'package:rohit_s_application12/presentation/home_Screen/home_Screen.dart';
+import 'package:rohit_s_application12/presentation/plantInfo_screen/binding/plantinfo_screen_binding.dart';
+import 'package:rohit_s_application12/presentation/plantInfo_screen/plantinfo_screen.dart';
 import 'package:rohit_s_application12/presentation/search_screen/binding/search_screen_binding.dart';
 import 'package:rohit_s_application12/presentation/search_screen/searchscreen.dart';
 import 'package:rohit_s_application12/presentation/startup_screen/startup_screen.dart';
@@ -34,7 +39,18 @@ class AppRoutes {
 
   static const String searchscreen = '/searchscreen';
 
+  static const String plantinfoscreen = '/plantinfo_screen';
+
   static List<GetPage> pages = [
+    GetPage(
+      name: plantinfoscreen,
+      page: () => plantInfo_screen(
+        image: File(""),
+      ),
+      bindings: [
+        plantinfo_screenBinding(),
+      ],
+    ),
     GetPage(
       name: searchscreen,
       page: () => search_Screen(),

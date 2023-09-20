@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:lottie/lottie.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:rohit_s_application12/core/app_export.dart';
 import 'package:rohit_s_application12/core/utils/image_constant.dart';
+import 'package:rohit_s_application12/presentation/plantInfo_screen/plantinfo_screen.dart';
 import 'package:rohit_s_application12/routes/app_routes.dart';
 import 'package:rohit_s_application12/widgets/custom_image_view.dart';
 
@@ -15,6 +18,18 @@ class home_Screen extends StatefulWidget {
 }
 
 class _home_ScreenState extends State<home_Screen> {
+  Future pickImage() async {
+    final ImagePicker _picker = ImagePicker();
+    final XFile? pickedFile = await _picker.pickImage(
+      source: ImageSource.gallery,
+    );
+    File imagee = File(pickedFile!.path);
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => plantInfo_screen(image: imagee)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,21 +127,25 @@ class _home_ScreenState extends State<home_Screen> {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
-                                Container(
-                                  child: Text(
-                                    "Gallery",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                        fontFamily: "poppins"),
+                                GestureDetector(
+                                  onTap: () => pickImage(),
+                                  child: Container(
+                                    child: Text(
+                                      "Gallery",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                          fontFamily: "poppins"),
+                                    ),
+                                    height: 35,
+                                    width: 120,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        border: Border.all(width: 0),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
                                   ),
-                                  height: 35,
-                                  width: 120,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      border: Border.all(width: 0),
-                                      borderRadius: BorderRadius.circular(10)),
                                 )
                               ],
                             )
@@ -213,6 +232,12 @@ class _home_ScreenState extends State<home_Screen> {
   onTapSearch() async {
     Get.toNamed(
       AppRoutes.searchscreen,
+    );
+  }
+
+  onTapinfo(image) async {
+    Get.toNamed(
+      AppRoutes.plantinfoscreen,
     );
   }
 }

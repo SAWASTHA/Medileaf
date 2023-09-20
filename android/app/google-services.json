@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281966679009",
+    "project_id": "medileaf-d54b8",
+    "storage_bucket": "medileaf-d54b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281966679009:android:a8a8eb1c866d03991b38a0",
+        "android_client_info": {
+          "package_name": "com.rohitsapplication.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI_2cvrLb-D6EXo_cy2_TtPnJ7jUn8qiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

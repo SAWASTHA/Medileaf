@@ -1,36 +1,52 @@
+import 'dart:io';
+
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'dart:io';
 import 'package:image_picker/image_picker.dart';
-import 'package:lottie/lottie.dart';
 import 'package:rohit_s_application12/core/app_export.dart';
 import 'package:rohit_s_application12/main.dart';
+import 'package:rohit_s_application12/presentation/plantInfo_screen/plantinfo_screen.dart';
 import 'package:rohit_s_application12/routes/app_routes.dart';
+import 'package:tflite/tflite.dart';
 
 class camera_screen extends StatefulWidget {
   // const camera_screen({super.key});
+  late List<CameraDescription> camera;
 
   @override
   State<camera_screen> createState() => _camera_screenState();
 }
 
-class _camera_screenState extends State<camera_screen>
-    with SingleTickerProviderStateMixin {
-  late File _image;
-  final imagePicker = ImagePicker();
+class _camera_screenState extends State<camera_screen> {
+  getpicture() async {
+    if (!_controller!.value.isInitialized) {
+      return null;
+    }
+    if (_controller!.value.isTakingPicture) {
+      return null;
+    }
+    try {
+      await _controller!.setFlashMode(FlashMode.off);
+      XFile file = await _controller!.takePicture();
+      File imagee = File(file.path);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => plantInfo_screen(image: imagee)),
+      );
+    } on CameraException catch (e) {
+      debugPrint("Camera Exception $e");
+      return null;
+    }
+  }
 
   late CameraController _controller;
 
-  late final AnimationController _animationController;
-
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 2));
     _controller = CameraController(camera[0], ResolutionPreset.max);
     _controller.initialize().then((_) {
       if (!mounted) {
@@ -53,18 +69,7 @@ class _camera_screenState extends State<camera_screen>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
-    _animationController.dispose();
-  }
-
-  bool imageClick = false;
-
-  Future getimage() async {
-    final image = await imagePicker.pickImage(source: ImageSource.camera);
-    setState(() {
-      _image = File(image!.path);
-    });
   }
 
   @override
@@ -73,9 +78,9 @@ class _camera_screenState extends State<camera_screen>
       body: Stack(
         children: [
           Container(
-            height: double.infinity,
-            child: CameraPreview(_controller),
-          ),
+              decoration: BoxDecoration(border: Border.all(width: 10)),
+              height: double.infinity,
+              child: CameraPreview(_controller)),
           Positioned(
             bottom: 0,
             child: Padding(
@@ -116,32 +121,18 @@ class _camera_screenState extends State<camera_screen>
               ),
             ),
           ),
-          // Positioned(
-          //     bottom: 150,
-          //     left: 135,
-          //     child: Container(
-          //       height: 120,
-          //       width: 120,
-          //       child: GestureDetector(
-          //         onTap: () {
-          //           if (imageClick == false) {
-          //             imageClick = true;
-          //             _animationController.forward();
-          //           }
-          //         },
-          //         child: Lottie.network(
-          //           "https://lottie.host/13509443-0bbd-4d0f-ad9c-fa96dd44bc67/ShqqSvcAxh.json",
-          //           controller: _animationController,
-          //         ),
-          //       ),
-          //     ))
           Positioned(
             bottom: 150,
-            left: 148,
-            child: CustomImageView(
-              imagePath: ImageConstant.ClickImage,
-              height: 90,
-              width: 90,
+            left: 140,
+            child: Container(
+              child: GestureDetector(
+                onTap: () => getpicture(),
+                child: CustomImageView(
+                  imagePath: ImageConstant.ClickImage,
+                  height: 90,
+                  width: 90,
+                ),
+              ),
             ),
           ),
         ],

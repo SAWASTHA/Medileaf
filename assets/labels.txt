@@ -1,0 +1,21 @@
+0 Aloevera
+1 Amla
+2 Ashoka
+3 Ashwagandha
+4 Avacado
+5 Bamboo
+6 Castor
+7 Curry Leaf
+8 Guava
+9 Henna
+10 Lemon
+11 Mint
+12 Neem
+13 Pepper
+14 Pomegranate
+15 Tulsi
+16 Wood Sorrel
+17 Rose
+18 Sunflower
+19 Papaya
+20 Hibiscus
