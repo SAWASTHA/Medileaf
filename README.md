@@ -49,10 +49,10 @@ Identification of Different Medicinal Plants/Raw materials through Image Process
 
 
 ##  Problem Statement Introduction
- Due to the rich floral diversity in India and high demand for medicinal plants, The proposal of using software capable of identifying these plants through image processing and machine learning algorithms can offer various benefits.
+Due to the rich floral diversity in India and high demand for medicinal plants, The proposal of using software capable of identifying these plants through image processing and machine learning algorithms can offer various benefits.
 Machine learning algorithms can be trained on vast datasets of plant images, allowing them to recognize different types of medicinal plants and can significantly enhance the accuracy of plant identification.
 Solution: To create a Cross-Platform Mobile application and website in which  user can scan or upload image of the plant and he/she will get the output such as name of the plant, medicinal properties, details of the disease and other details. 
- We will use ML model for image processing and to get the details of the plant. We will use Figma for designing and Flutter framework for development.
+We will use ML model for image processing and to get the details of the plant. We will use Figma for designing and Flutter framework for development.
 In our mobile application, user can also scan at botanical gardens to get all details of the plants with their medicinal properties.
 User can also save the plants they wish to view later,  also user can search using the system’s search bar or by using voice recognition.
 
@@ -85,7 +85,7 @@ India, with a rich heritage of floral diversity, is well-known for its medicinal
 
 
 
-Limitations: 
+* Limitations: 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
