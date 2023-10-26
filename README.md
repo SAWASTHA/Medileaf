@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SAWASTHA/Medileaf">
-    <img src="https://github.com/sakshimunde18/Medileaf/assets/92391500/9812da04-d404-43bb-94bf-0728a03ac862.jpg" alt="Logo" width="80" height="80">
+     <img src="https://user-images.githubusercontent.com/92391500/232209609-2de0d41f-5607-44d6-a96a-10c60e074f04.jpg" alt="Logo" width="80" height="80">
   </a>
 <h3 align="center"><a href="https://github.com/SAWASTHA/Medileaf">MediLeaf</a></h3>
   <p align="center">
