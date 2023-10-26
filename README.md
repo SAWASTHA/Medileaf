@@ -95,7 +95,7 @@ Limitations:
 
 ## About Us
 
- We are a quartet of enthusiastic college students, driven by a common desire to tackle pressing real-world issues. Our team embodies a tapestry of distinct backgrounds, talents, and life experiences, but what unites us is our collective aspiration to craft pioneering solutions that will impart a meaningful and positive change upon our local community.
+Hello and welcome to our dynamic project team! We're a vibrant crew of four college students on a shared mission to crack the code of real-world challenges. Our squad is a colorful mix of backgrounds, talents, and adventures, but our hearts beat as one when it comes to fashioning avant-garde solutions that'll sprinkle a touch of magic over our community.
 
 <strong> Team Members :-</strong><br>
 1.[Rohit Waghmare (Member)](https://github.com/Rohitwaghmare7)<br>
