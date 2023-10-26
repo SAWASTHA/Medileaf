@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SAWASTHA/Medileaf">
-    <img src="https://github.com/sakshimunde18/Medileaf/assets/92391500/9812da04-d404-43bb-94bf-0728a03ac862.jpg" alt="Logo" width="80" height="80">
+     <img src="https://user-images.githubusercontent.com/92391500/232209609-2de0d41f-5607-44d6-a96a-10c60e074f04.jpg" alt="Logo" width="80" height="80">
   </a>
 <h3 align="center"><a href="https://github.com/SAWASTHA/Medileaf">MediLeaf</a></h3>
   <p align="center">
@@ -103,7 +103,7 @@ Hello and welcome to our dynamic project team! We're a vibrant crew of four coll
 3.[Sakshi Munde(Member)](https://github.com/sakshimunde18)<br>
 4.[Akshaya Kolhe(Member)](https://github.com/AkshayaKolhe)<br>
 5.[Rinku Jat (Member)](https://github.com/Rinku9172)<br>
-6.[Pratik Deshpande(Member)]()<br>
+6.[Pratik Deshpande(Member)](https://github.com/pratik062002)<br>
 
 Together, we are a dynamic and collaborative team that believes in the power of learning, creativity, and innovation. We are excited to embark on this project and look forward to sharing our progress with you.
 
