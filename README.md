@@ -103,7 +103,7 @@ Hello and welcome to our dynamic project team! We're a vibrant crew of four coll
 3.[Sakshi Munde(Member)](https://github.com/sakshimunde18)<br>
 4.[Akshaya Kolhe(Member)](https://github.com/AkshayaKolhe)<br>
 5.[Rinku Jat (Member)](https://github.com/Rinku9172)<br>
-6.[Pratik Deshpande(Member)]()<br>
+6.[Pratik Deshpande(Member)](https://github.com/pratik062002)<br>
 
 Together, we are a dynamic and collaborative team that believes in the power of learning, creativity, and innovation. We are excited to embark on this project and look forward to sharing our progress with you.
 
